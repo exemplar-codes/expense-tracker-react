@@ -1,9 +1,7 @@
+import ExpenseItem from "./components/ExpenseItem";
+
 function App() {
-  return (
-    <div>
-      <h1>Expense Tracker</h1>
-    </div>
-  );
+  return <ExpenseItem />;
 }
 
 export default App;
