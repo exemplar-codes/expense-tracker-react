@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 
 import Card from "../UI/Card";
@@ -6,10 +6,11 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
-  let title = props.title;
+  let [title, setTitle] = useState(props.title);
+  console.log("Render started");
   function clickHandler() {
-    console.log("Updated!");
-    title = Math.floor(Math.random() * 100);
+    console.log("Clicked");
+    setTitle("Updated");
   }
   return (
     <Card className="expense-item">
