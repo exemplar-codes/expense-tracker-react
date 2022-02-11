@@ -41,7 +41,12 @@ function ExpenseForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
-          <input type="text" name="title" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            name="title"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
 
         <div className="new-expense__control">
@@ -51,6 +56,7 @@ function ExpenseForm() {
             name="amount"
             min="0.01"
             step="0.01"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -62,6 +68,7 @@ function ExpenseForm() {
             name="date"
             min="2019-01-01"
             max="2022-12-31"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
