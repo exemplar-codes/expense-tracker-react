@@ -26,9 +26,13 @@ const expenses = [
 ];
 
 function App() {
+  const receiveExpenseData = (data) => {
+    console.log(data);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense sendToApp={receiveExpenseData} />
       <Expenses expenses={expenses} />
     </div>
   );

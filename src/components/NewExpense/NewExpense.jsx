@@ -3,10 +3,14 @@ import ExpenseForm from "./ExpenseForm";
 
 import "./NewExpense.css";
 
-function NewExpense() {
+function NewExpense(props) {
+  const sendToNewExpenseHandler = (expense) => {
+    props.sendToApp({ ...expense, id: Math.random() });
+  };
+
   return (
     <div className="new-expense">
-      <ExpenseForm />
+      <ExpenseForm sendToNewExpense={sendToNewExpenseHandler} />
     </div>
   );
 }
