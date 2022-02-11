@@ -6,17 +6,16 @@ import Card from "../../UI/Card";
 import ExpensesFilter from "../NewExpense/ExpensesFilter";
 
 function Expense({ expenses }) {
-  const [year, setYear] = useState(0);
+  const [year, setYear] = useState("2019");
 
   const onFilterYearHandler = (receivedYear) => {
     setYear(receivedYear);
-    console.log(year);
   };
 
   return (
     <div>
       <Card className="expenses">
-        <ExpensesFilter onFilterYear={onFilterYearHandler} />
+        <ExpensesFilter defaultYear={year} onFilterYear={onFilterYearHandler} />
         <ExpenseItem
           title={expenses[0].title}
           date={expenses[0].date}
