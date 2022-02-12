@@ -5,7 +5,7 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../../UI/Card";
 import ExpensesFilter from "../NewExpense/ExpensesFilter";
 
-function Expense({ expenses }) {
+function Expenses({ expenses }) {
   const [year, setYear] = useState("2019");
 
   const onFilterYearHandler = (receivedYear) => {
@@ -24,4 +24,4 @@ function Expense({ expenses }) {
   );
 }
 
-export default Expense;
+export default Expenses;
