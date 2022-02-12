@@ -17,7 +17,7 @@ function Expenses({ expenses }) {
       <Card className="expenses">
         <ExpensesFilter defaultYear={year} onFilterYear={onFilterYearHandler} />
         {expenses
-          .filter(({ date }) => date.getFullYear() == year)
+          .filter(({ date }) => date.getFullYear().toString() === year)
           .map(({ title, date, amount, id }) => (
             <ExpenseItem title={title} date={date} amount={amount} key={id} />
           ))}
