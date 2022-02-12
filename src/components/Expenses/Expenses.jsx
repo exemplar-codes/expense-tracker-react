@@ -19,9 +19,13 @@ function Expenses({ expenses }) {
     <div>
       <Card className="expenses">
         <ExpensesFilter defaultYear={year} onFilterYear={onFilterYearHandler} />
-        {filteredExpenses.map(({ title, date, amount, id }) => (
-          <ExpenseItem title={title} date={date} amount={amount} key={id} />
-        ))}
+        {filteredExpenses.length === 0 ? (
+          <p style={{ color: "white" }}>No expenses found</p>
+        ) : (
+          filteredExpenses.map(({ title, date, amount, id }) => (
+            <ExpenseItem title={title} date={date} amount={amount} key={id} />
+          ))
+        )}
       </Card>
     </div>
   );
