@@ -16,7 +16,7 @@ function Expense({ expenses }) {
     <div>
       <Card className="expenses">
         <ExpensesFilter defaultYear={year} onFilterYear={onFilterYearHandler} />
-        {expenses.map((title, date, amount) => (
+        {expenses.map((title, date, amount, id) => (
           <ExpenseItem {...title} {...date} {...amount} />
         ))}
       </Card>
