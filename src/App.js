@@ -29,9 +29,7 @@ function App() {
   const [expenseItems, setExpenseItems] = useState(DUMMY_EXPENSES);
 
   const receiveExpenseData = (data) => {
-    console.log(data);
     setExpenseItems((prevExpenseList) => [data, ...prevExpenseList]);
-    console.log(expenseItems[0]);
   };
 
   return (
