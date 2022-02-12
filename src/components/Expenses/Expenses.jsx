@@ -6,7 +6,7 @@ import Card from "../../UI/Card";
 import ExpensesFilter from "../NewExpense/ExpensesFilter";
 
 function Expenses({ expenses }) {
-  const [year, setYear] = useState("2019");
+  const [year, setYear] = useState("2021");
 
   const onFilterYearHandler = (receivedYear) => {
     setYear(receivedYear);
