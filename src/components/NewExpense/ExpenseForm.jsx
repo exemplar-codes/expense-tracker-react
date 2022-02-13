@@ -24,7 +24,7 @@ function ExpenseForm(props) {
     // entered data is saved
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: Number(enteredAmount), // form input is a string, convert to number
       date: new Date(enteredDate),
     };
 
