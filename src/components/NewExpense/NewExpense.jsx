@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpenseForm from "./ExpenseForm";
 
 import "./NewExpense.css";
@@ -8,9 +8,20 @@ function NewExpense(props) {
     props.sendToApp({ ...expense, id: Math.random() });
   };
 
+  const [showForm, setShowForm] = useState(false);
+
+  const switchFormVisibility = () => setShowForm((prevValue) => !prevValue);
+
   return (
     <div className="new-expense">
-      <ExpenseForm sendToNewExpense={sendToNewExpenseHandler} />
+      {showForm ? (
+        <ExpenseForm
+          sendToNewExpense={sendToNewExpenseHandler}
+          switchFormVisibility={switchFormVisibility}
+        />
+      ) : (
+        <button onClick={switchFormVisibility}>Add button</button>
+      )}
     </div>
   );
 }
