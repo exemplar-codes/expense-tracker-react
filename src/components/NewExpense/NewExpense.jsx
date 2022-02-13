@@ -20,7 +20,7 @@ function NewExpense(props) {
           switchFormVisibility={switchFormVisibility}
         />
       ) : (
-        <button onClick={switchFormVisibility}>Add button</button>
+        <button onClick={switchFormVisibility}>Add New Expense</button>
       )}
     </div>
   );
